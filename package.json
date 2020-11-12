@@ -6,6 +6,6 @@
   "author": "Saurav Kumar <sauravk7077@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "dot-env": "^0.0.1"
+    "dot-env": "0.0.1"
   }
 }
