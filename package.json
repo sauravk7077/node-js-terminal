@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/sauravk7077/node-js-terminal.git",
   "author": "Saurav Kumar <sauravk7077@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dot-env": "^0.0.1"
+  }
 }
