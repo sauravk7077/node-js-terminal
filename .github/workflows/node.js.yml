@@ -13,8 +13,8 @@ jobs:
   
   build:
     runs-on: ubuntu-latest
-    output:
-    - id: step1
+    outputs:
+      output1: ${{ steps.step1.outputs.test }}
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x]
