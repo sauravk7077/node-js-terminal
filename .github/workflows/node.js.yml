@@ -34,5 +34,6 @@ jobs:
         then
           echo "Got secret"
         fi
+        echo "hello"
     - run: node index
     - run: npm test
