@@ -27,8 +27,8 @@ jobs:
         MY_SECRET: ${{ secrets.MY_SECRET }}
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo $MY_SECRET
     - id: step1  
     - run: npm ci
+    - run: echo $MY_SECRET
     - run: node index
     - run: npm test
