@@ -8,6 +8,8 @@ on:
     branches: [ main, test ]
   pull_request:
     branches: [ main, test ]
+env:
+  POT_TOMATO: ${{ secrets.POT_TOMATO }}   
 
 jobs:
   
@@ -24,9 +26,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        env:
-          POT_TOMATO: ${{ secrets.POT_TOMATO }}        
       - id: step1
         run: echo "hello"
       - id: step2
-        run: echo ${{ secrets }}
+        run: "There is: $POT_TOMATO"
