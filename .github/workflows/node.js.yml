@@ -36,5 +36,5 @@ jobs:
           echo "hello"
       - run: node index
       - run: npm test
-      env:
+        env:
           MY_SECRET: ${{ secrets.MY_SECRET }}
