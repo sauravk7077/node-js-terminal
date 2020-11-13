@@ -32,6 +32,7 @@ jobs:
     - run: |
         if ["$MY_SECRET" -eq "ABCD"]
         then
-          echo $MY_SECRET
+          echo "Got secret"
+        fi
     - run: node index
     - run: npm test
