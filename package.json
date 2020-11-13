@@ -2,6 +2,7 @@
   "name": "node-js-terminal",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "repository": "https://github.com/sauravk7077/node-js-terminal.git",
   "author": "Saurav Kumar <sauravk7077@gmail.com>",
   "license": "MIT",

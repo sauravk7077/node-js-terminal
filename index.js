@@ -1,4 +1,6 @@
 import process from "process";
-require('dotenv').config();
+import dotenv from "dotenv";
 
-console.log(process.env.MYSECRET);
+dotenv.config();
+
+console.log(process.env.MY_SECRET);
