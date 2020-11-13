@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-        
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET}}        
       - id: step1
-        run: echo "hello" 
+        run: echo "hello"
+      - run: echo "$MY_SECRET"
