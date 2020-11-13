@@ -28,4 +28,4 @@ jobs:
           POT_TOMATO: ${{ secrets.POT_TOMATO }}        
       - id: step1
         run: echo "hello"
-      - run: echo $POT_TOMATO
+      - run: echo ${{secrets}}
