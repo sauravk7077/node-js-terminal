@@ -27,4 +27,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - id: step1
-        run: npm start
+        run: npm ci
+      - run: npm start
