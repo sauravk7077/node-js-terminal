@@ -29,4 +29,4 @@ jobs:
       - id: step1
         run: npm ci
       - run: npm start
-        run: npm test
+      - run: npm test
