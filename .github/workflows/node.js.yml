@@ -20,21 +20,11 @@ jobs:
         node-version: [12.x, 14.x]
 
     steps:
-      - name: Use Node.js ${{ matrix.node-version }} 
+      - name: "Node js test"
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-    
         with:
           node-version: ${{ matrix.node-version }}
-      - id: step1  
-        run: npm ci
-      - run: |
-          if [ "$MY_SECRET" -eq "ABCD" ]
-          then
-            echo "Got secret"
-          fi
-          echo "hello"
-      - run: node index
-      - run: npm test
-    env:
-      MY_SECRET: ${{ secrets.MY_SECRET }}
+        
+      - id: step1
+      - run: echo "hello" 
