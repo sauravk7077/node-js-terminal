@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.step2.outputs.test }}
+      output1: ${{ steps.step1.outputs.test }}
     strategy:
       matrix:
         node-version: [12.x, 14.x]
@@ -27,6 +27,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - id: step1
-        run: echo "hello"
-      - id: step2
-        run: echo "There is $POT_TOMATO"
+        run: npm start
