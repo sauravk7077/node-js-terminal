@@ -17,7 +17,7 @@ jobs:
       output1: ${{ steps.step1.outputs.test }}
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [12.x, 14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -27,7 +27,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - id: step1 
-      run: npm ci
+    - id: step1
+      run: echo "$secrets"
+    - run: npm ci
     - run: node index
     - run: npm test
