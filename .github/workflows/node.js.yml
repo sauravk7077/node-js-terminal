@@ -22,13 +22,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      with:
-        MY_SECRET: ${{ secrets.MY_SECRET }}
       uses: actions/setup-node@v1
+      env:
+        MY_SECRET: ${{ secrets.MY_SECRET }}
       with:
         node-version: ${{ matrix.node-version }}
-    - id: step1
-      run: echo ${{ secrets.MY_SECRET }}
+    - id: step1  
     - run: npm ci
+    - run: echo $MY_SECRET
     - run: node index
     - run: npm test
