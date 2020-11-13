@@ -29,4 +29,4 @@ jobs:
       - id: step1
         run: echo "hello"
       - id: step2
-        run: "There is: $POT_TOMATO"
+        run: echo "There is $POT_TOMATO"
