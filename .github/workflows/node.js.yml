@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
         env:
-          MY_SECRET: ${{ secrets.POT_TOMATO }}        
+          POT_TOMATO: ${{ secrets.POT_TOMATO }}        
       - id: step1
         run: echo "hello"
-      - run: echo $MY_SECRET
+      - run: echo $POT_TOMATO
