@@ -1,5 +1,5 @@
-import process from "process";
-import dotenv from "dotenv";
+const process = require("process");
+const dotenv = require("dotenv");
 
 dotenv.config();
 
