@@ -30,7 +30,7 @@ jobs:
     - id: step1  
       run: npm ci
     - run: |
-        if ["$MY_SECRET" -eq "ABCD"]
+        if [ "$MY_SECRET" -eq "ABCD" ]
         then
           echo "Got secret"
         fi
