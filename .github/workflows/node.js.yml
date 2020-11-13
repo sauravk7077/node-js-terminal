@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       output1: ${{ steps.step1.outputs.test }}
-      output1: ${{ steps.step2.outputs.test }}
     strategy:
       matrix:
         node-version: [12.x, 14.x]
@@ -30,5 +29,4 @@ jobs:
       - id: step1
         run: npm ci
       - run: npm start
-      - id: step2
         run: npm test
